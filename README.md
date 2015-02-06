@@ -11,11 +11,11 @@ Print your tags :)
 
 Option|Type|Description
 ---|---|---
-itemsTag|String|HTML tag of the items
-itemsClass|String|CSS class of the items
-containerID|String|ID of the container
-minSize|Number|Minimum font size
-maxSize|Number|Maximum font size
+`itemsTag`|String|HTML tag of the items
+`itemsClass`|String|CSS class of the items
+`containerID`|String|ID of the container
+`minSize`|Number|Minimum font size
+`maxSize`|Number|Maximum font size
 
 # Quick tutorial
 ```javascript
