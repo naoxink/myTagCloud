@@ -37,3 +37,6 @@ myTagCloud.print();
 // [TIP] You can chain methods like:
 myTagCloud.addTag('Something', 120, 'http://www.google.es').addMaxColor('#F00').print();
 ```
+# TODO list
+- [ ] Possibility of sorting tags
+- [ ] Remove jQuery dependency
