@@ -5,7 +5,17 @@ Print your tags :)
 [Demo here](http://naoxink.hol.es/myTagCloud/)
 
 # Second
-Info: You can configure a lot of options inside the code, they are prepared to be merged with another object (in the future)
+**Info:** You can configure a lot of options inside the code, they are prepared to be merged with another object (in the future)
+
+**Configurable options (inside code)**
+
+Option|Type|Description
+---|---|---
+itemsTag|String|HTML tag of the items
+itemsClass|String|CSS class of the items
+containerID|String|ID of the container
+minSize|Number|Minimum font size
+maxSize|Number|Maximum font size
 
 # Quick tutorial
 ```javascript
