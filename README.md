@@ -36,7 +36,12 @@ myTagCloud.print();
 
 // [TIP] You can chain methods like:
 myTagCloud.addTag('Something', 120, 'http://www.google.es').addMaxColor('#F00').print();
+
+// Also you can print the cloud in 'list mode' creating the object like:
+var myTagCloud = new tagCloud("#myDiv", "list");
 ```
 # TODO list
+- [ ] Possibility of passing an options object to the constructor
+- [ ] Merge options object with default options
 - [ ] Possibility of sorting tags
 - [ ] Remove jQuery dependency
