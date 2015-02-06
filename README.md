@@ -4,6 +4,9 @@ Print your tags :)
 # First of all
 [Demo here](http://naoxink.hol.es/myTagCloud/)
 
+# Second
+Info: You can configure a lot of options inside the code, they are prepared to be merged with another object (in the future)
+
 # Quick tutorial
 ```javascript
 // Create an object over a div selection
