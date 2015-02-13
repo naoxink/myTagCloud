@@ -56,5 +56,7 @@ var myTagCloud = new tagCloud("#myDiv", "list");
 # TODO list
 - [ ] Possibility of passing an options object to the constructor
 - [ ] Merge options object with default options
-- [ ] Possibility of sorting tags
+- [x] Possibility of sorting tags
 - [ ] Remove jQuery dependency
+- [x] Color schema from a single color
+- [x] Change color schema
