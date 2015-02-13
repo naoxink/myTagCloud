@@ -192,7 +192,8 @@ function tagCloud(boardSelector){
 				jQuery(item).css('text-decoration', 'none');
 			}
 		}
-		this._cloudSort();
+		// Houston, we have a memory problem if we have a lot of tags :(
+		// this._cloudSort();
 	};
 
 	this._setListStyle = function(items){
