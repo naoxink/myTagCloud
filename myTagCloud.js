@@ -4,7 +4,7 @@ function tagCloud(boardSelector){
     this.colors = ['#9CCDEB', '#9FD7F6', '#77C0F9', '#3886C2', '#346EA6'];
     this.maxWeight = 0;
     this.minWeight = 0;
-    this.listMode = arguments[1] == 'list' ? true : false;
+    this.user_config = arguments[1] && typeof arguments[1] === 'object' ? arguments[1] : null
     this.hexRange = '0123456789ABCDEF';
     this.config = {
         "itemsTag": "span",
@@ -12,8 +12,13 @@ function tagCloud(boardSelector){
         "containerID": "tagCloud",
         "weightAVG": 0,
         "minSize": 15,
-        "maxSize": 60
+        "maxSize": 60,
+        "listMode": false
     };
+    
+    if(this.user_config){
+    	$.extend(true, this.config, this.user_config);
+    }
 
     this.addTag = function(label, weight, link){
         var tag;
@@ -165,7 +170,7 @@ function tagCloud(boardSelector){
 
     this._setItemStyles = function(){
         var items = jQuery('#'+this.config.containerID+' .'+this.config.itemsClass);
-        if(!this.listMode){
+        if(!this.config.listMode){
             this._setCloudStyle(items);
         }else{
             this._setListStyle(items);
@@ -193,7 +198,7 @@ function tagCloud(boardSelector){
             }
         }
         // Houston, we have a memory problem if we have a lot of tags :(
-        // this._cloudSort();
+        this._cloudSort();
     };
 
     this._setListStyle = function(items){
@@ -295,16 +300,5 @@ function tagCloud(boardSelector){
             if(x == items.length){ return false; }
         }
     };
-
-    return {
-    	'addTag': addTag,
-		'addMaxColor': addMaxColor,
-		'addMinColor': addMinColor,
-		'setColors': setColors,
-		'setColorsFrom': setColorsFrom,
-		'setTags': setTags,
-		'orderElements': orderElements,
-		'print': print
-    }
 
 };
