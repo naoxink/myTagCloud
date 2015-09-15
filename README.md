@@ -4,25 +4,32 @@ Print your tags :)
 # First of all
 [Demo here](http://naoxink.hol.es/myTagCloud/)
 
-# Second
-**Info:** You can configure a lot of options inside the code, they are prepared to be merged with another object (in the future)
+# Lightning example
+`tagCloud( container [, options])`
+```javascript
+var myTagCloud = new tagCloud("#myDiv", {
+	maxSize: 30,
+	minSize: 10
+});
+```
 
-**Configurable options (inside code)**
+**Configurable options**
 
 Option|Type|Description
 ---|---|---
+`listMode`|Boolean|Enable/Disable list mode
 `itemsTag`|String|HTML tag of the items
 `itemsClass`|String|CSS class of the items
 `containerID`|String|ID of the container
-`minSize`|Number|Minimum font size
-`maxSize`|Number|Maximum font size
+`minSize`|Number|Minimum font size (Pixels)
+`maxSize`|Number|Maximum font size (Pixels)
 
 # Quick tutorial
 ```javascript
 // Create an object over a div selection
 var myTagCloud = new tagCloud("#myDiv");
 
-// Add the tags
+// Add the tags (Text, Weight, URL)
 myTagCloud.addTag('Something', 120, 'http://www.google.es');
 
 // Or you can put an array of tags like this:
@@ -50,13 +57,12 @@ myTagCloud.print();
 // [TIP] You can chain methods like:
 myTagCloud.addTag('Something', 120, 'http://www.google.es').addMaxColor('#F00').print();
 
-// Also you can print the cloud in 'list mode' creating the object like:
-var myTagCloud = new tagCloud("#myDiv", "list");
 ```
 # TODO list
-- [ ] Possibility of passing an options object to the constructor
-- [ ] Merge options object with default options
+- [x] Possibility of passing an options object to the constructor
+- [x] Merge options object with default options
 - [x] Possibility of sorting tags
 - [ ] Remove jQuery dependency
 - [x] Color schema from a single color
 - [x] Change color schema
+- [ ] Fix problem when printing a TON of tags
