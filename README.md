@@ -2,7 +2,7 @@
 Print your tags :)
 
 # First of all
-[Demo here](http://naoxink.hol.es/myTagCloud/)
+[Demo here](http://naoxink.ga/myTagCloud/)
 
 # Lightning example
 `tagCloud( container [, options])`
